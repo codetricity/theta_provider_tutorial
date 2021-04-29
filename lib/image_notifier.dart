@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 
 class ImageNotifier extends ChangeNotifier {
-  String _imageLocation = 'assets/images/R0011911.JPG';
+  // String _imageLocation = 'assets/images/R0011911.JPG';
+  Image _image = Image.asset('assets/images/R0011911.JPG');
 
   // getter
-  String get imageLocation => _imageLocation;
+  Image get image => _image;
 
   // update
-  void updateImage(String imageLocation) {
-    _imageLocation = imageLocation;
+  void updateImage(Image image) {
+    _image = image;
     notifyListeners();
   }
 }

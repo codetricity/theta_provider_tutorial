@@ -10,7 +10,7 @@ class DetailsScreen extends StatelessWidget {
       appBar: AppBar(),
       body: Center(
         child: Panorama(
-          child: Image.asset(context.read<ImageNotifier>().imageLocation),
+          child: context.read<ImageNotifier>().image,
         ),
       ),
     );

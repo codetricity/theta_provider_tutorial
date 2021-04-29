@@ -16,67 +16,38 @@ class ThumbScreen extends StatelessWidget {
       ),
       body: ListView(
         children: [
-          IconButton(
-              icon: Image.asset('assets/images/R0011911_THUMB.jpg'),
-              iconSize: 300,
-              tooltip: '-1.7',
-              onPressed: () {
-                context
-                    .read<ImageNotifier>()
-                    .updateImage('assets/images/R0011911.JPG');
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => DetailsScreen()));
-              }),
-          IconButton(
-            icon: Image.asset('assets/images/R0011912_THUMB.jpg'),
-            iconSize: 300,
-            onPressed: () {
-              context
-                  .read<ImageNotifier>()
-                  .updateImage('assets/images/R0011912.JPG');
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => DetailsScreen()));
-            },
-            tooltip: '-0.7',
-          ),
-          IconButton(
-            icon: Image.asset('assets/images/R0011913_THUMB.jpg'),
-            iconSize: 300,
-            onPressed: () {
-              context
-                  .read<ImageNotifier>()
-                  .updateImage('assets/images/R0011913.JPG');
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => DetailsScreen()));
-            },
-            tooltip: '0.0',
-          ),
-          IconButton(
-            icon: Image.asset('assets/images/R0011914_THUMB.jpg'),
-            iconSize: 300,
-            onPressed: () {
-              context
-                  .read<ImageNotifier>()
-                  .updateImage('assets/images/R0011914.JPG');
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => DetailsScreen()));
-            },
-            tooltip: '0.7',
-          ),
-          IconButton(
-            icon: Image.asset('assets/images/R0011915_THUMB.jpg'),
-            iconSize: 300,
-            onPressed: () {
-              context
-                  .read<ImageNotifier>()
-                  .updateImage('assets/images/R0011915.JPG');
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => DetailsScreen()));
-            },
-            tooltip: '1.7',
-          ),
+          CarThumbButton(imageNameBase: 'R0011911', toolTip: '-1.7'),
+          CarThumbButton(imageNameBase: 'R0011912', toolTip: '-0.7'),
+          CarThumbButton(imageNameBase: 'R0011913', toolTip: '0.0'),
+          CarThumbButton(imageNameBase: 'R0011914', toolTip: '+0.7'),
+          CarThumbButton(imageNameBase: 'R0011915', toolTip: '+1.7'),
         ],
       ),
+    );
+  }
+}
+
+class CarThumbButton extends StatelessWidget {
+  const CarThumbButton(
+      {Key? key, required this.imageNameBase, required this.toolTip})
+      : super(key: key);
+
+  final String imageNameBase;
+  final String toolTip;
+
+  @override
+  Widget build(BuildContext context) {
+    return IconButton(
+      icon: Image.asset('assets/images/$imageNameBase\_THUMB.jpg'),
+      iconSize: 300,
+      onPressed: () {
+        context.read<ImageNotifier>().updateImage(
+              Image.asset('assets/images/$imageNameBase.JPG'),
+            );
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => DetailsScreen()));
+      },
+      tooltip: this.toolTip,
     );
   }
 }
