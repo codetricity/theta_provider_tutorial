@@ -7,6 +7,23 @@ additional hardware.
 
 ![screenshot](docs/screenshot.gif)
 
+## Usage
+
+To make the repository smaller, this tutorial does not ship with any
+platforms.  You must run `flutter create .` to create the `android` or
+`windows` or `ios` or `web` directories.
+
+```shell
+flutter create .
+flutter pub get
+```
+
+## Tutorial
+
+The tutorial for this code is freely available on YouTube.
+
+[https://youtu.be/h6LQqBAioBA](https://youtu.be/h6LQqBAioBA)
+
 ## THETA Images
 
 The images are taken with HDR filter using a RICOH THETA
@@ -24,7 +41,7 @@ using a script and saved to disk.  See the article
 [RICOH THETA SC2 Image Thumbnails](https://theta360developers.github.io/webapi/sc2/2020/05/05/sc2-thumbnails.html) for more information on the process of
 getting thumbnails.
 
-You can use your own 360 images by placing them in `assets/images`.  There 
+You can use your own 360 images by placing them in `assets/images`.  There
 isino requirement to have a RICOH THETA camera or use RICOH THETA images
 in this tutorial.
 
