@@ -30,7 +30,6 @@ This article on DZone explains what provider is and when to use it.
 
 [Flutter 2.0 State Management Introduction With Provider 5.0](https://dzone.com/articles/flutter-20-state-management-introduction-with-prov)
 
-
 ## THETA Images
 
 The images are taken with HDR filter using a RICOH THETA
@@ -69,4 +68,3 @@ It also adds additional text below the thumbnails to make the demo more usable a
 a virtual tour.
 
 ![variant thumbnails](docs/variant_screenshot.gif)
-
