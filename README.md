@@ -20,9 +20,16 @@ flutter pub get
 
 ## Tutorial
 
-The tutorial for this code is freely available on YouTube.
+This code was built for a tutorial. It is freely available on YouTube.
 
 [https://youtu.be/h6LQqBAioBA](https://youtu.be/h6LQqBAioBA)
+
+## Overview of Provider
+
+This article on DZone explains what provider is and when to use it.
+
+[Flutter 2.0 State Management Introduction With Provider 5.0](https://dzone.com/articles/flutter-20-state-management-introduction-with-prov)
+
 
 ## THETA Images
 
@@ -49,3 +56,17 @@ in this tutorial.
 
 If you want to grab the images from a RICOH THETA camera, there is a full set of
 tutorials [here](https://youtube.com/playlist?list=PL0feeJIlTI8kMLp9jfcyVj198-pcEy0Fr).
+
+## Extending the Tutorial
+
+The exercise below uses a second variable as part of the `ImageNotifier`.
+
+[provider_tutorial_variant](https://github.com/codetricity/provider_tutorial_variant)
+
+![details screenshot](docs/variant_details.gif)
+
+It also adds additional text below the thumbnails to make the demo more usable as
+a virtual tour.
+
+![variant thumbnails](docs/variant_screenshot.gif)
+
